@@ -1,0 +1,54 @@
+* {
+    font-family: "Poppins", sans-serif;
+    background-color: transparent;
+}
+
+html {
+    font-size: 100%;
+}
+
+.header {
+    display: inline;
+}
+
+.logo {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+}
+
+.orange-text {
+    color: orange;
+}
+
+.grey-text {
+    color: #828282;
+}
+
+.dark-grey-text {
+    color: #575757;
+}
+
+.best-medal {
+    width: fit-content;
+    border-radius: 100px;
+    padding: 1em;
+    background-color: rgba(251, 147, 0, 0.2);
+}
+
+.best-medal .orange-text {
+    opacity: 1;
+}
+
+.very-big-text {
+    font-size: 2.3rem;
+}
+
+.ordinary-button {
+    border-radius: 100px;
+    padding: 1em 2em 1em 2em;
+    background-color: orange;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
