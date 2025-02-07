@@ -88,30 +88,71 @@ html {
 .calorie-card {
     width: 220px;
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
     padding: 16px;
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.header p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
 
+.header h2 {
+    font-size: 24px;
+    margin: 8px 0 16px;
+}
+
+.calorie-card {
+    width: 15em;
+    background: #fff;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calorie-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.calorie-card h2 {
+    font-size: 24px;
+    margin: 8px 0 16px;
+}
+
+/* Flex container for progress bars */
 .bar-plot {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    height: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 5%; /* This controls the spacing between progress bars */
+    height: 10% /* This sets the maximum fill length for each bar */
 }
 
-
+/* Vertical progress bar without wrappers */
 .bar {
     -webkit-appearance: none;
     appearance: none;
-    width: 100%;
-    height: 7%;
-    transform: rotate(-90deg);
-    background: transparent;
+
+    /* Fixed dimensions:
+       - width becomes the fixed thickness of the bar
+       - height is the full fill length */
+    width: 7%;
+    height: 13%;
+
+    /* Use writing-mode and text direction so that the fill starts at the bottom */
+    writing-mode: vertical-rl;
+    direction: rtl;
+
+    margin: 0;
+    flex: 0 0 auto;
 }
 
+/* Styling for WebKit browsers (Chrome, Safari) */
 .bar::-webkit-progress-bar {
     background: #f0f0f0;
     border-radius: 6px;
@@ -122,11 +163,85 @@ html {
     border-radius: 6px;
 }
 
+/* Styling for Firefox */
 .bar::-moz-progress-bar {
     background: linear-gradient(to top, #ffa726, #ffcc80);
     border-radius: 6px;
 }
 
-.bar:not(:last-child) {
-    margin-right: 6px; /* Add spacing between the bars */
+.second-heading {
+    font-size: 1.7em;
+}
+
+.card {
+    background: #FFFFFF; /* White card background */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Adjust width as needed */
+    text-align: center;
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    top: -40px; /* Position the badge above the card */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 60px;
+    height: 60px;
+    background: #FFE8C8;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-badge img {
+    width: 40px; /* Adjust icon size */
+    height: auto;
+}
+
+.card-content {
+    margin-top: 50px; /* Offset for badge */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #222222;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #575757;
+    margin: 15px 0 20px;
+    line-height: 1.5;
+}
+
+.card-button {
+    background-color: #FFA550;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Spacing between text and icon */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+    background-color: #FF8A00;
+}
+
+.card-button svg path {
+    stroke: #FFFFFF; /* Change arrow color inside button */
 }
