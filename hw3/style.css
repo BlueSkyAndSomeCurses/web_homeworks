@@ -4,11 +4,24 @@
 }
 
 html {
-    font-size: 100%;
+    font-size: 1vmax;
 }
 
 .header {
-    display: inline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 2vh 7vw 2vh 7vw;
+}
+
+.header-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30%;
+    gap: 10%;
 }
 
 .logo {
@@ -28,6 +41,11 @@ html {
     color: #333333;
 }
 
+.home-link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .best-medal {
     width: fit-content;
     border-radius: 100px;
@@ -39,40 +57,71 @@ html {
     opacity: 1;
 }
 
-.very-big-text {
-    font-size: 2.3rem;
-}
 
 .ordinary-button {
     border-radius: 100px;
-    padding: 1em 2em 1em 2em;
+    padding: 2vh 2.7vw;
     background-color: orange;
     border: none;
     outline: none;
     color: white;
     font-weight: bold;
+    height: fit-content;
+    align-self: center;
 }
 
-.info-section {
-
+.main-page-content {
+    display: flex;
+    padding: 1vh 5vw 1vh 5vw;
 }
 
-.info-section p {
+.first-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-section article {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.first-section article H1 {
+    font-size: 5em;
+    margin: 5% 0 5%;
+}
+
+.first-section article p {
+    font-size: 1.7em;
+}
+
+.first-section button {
+    align-self: flex-start;
+}
+
+.first-section .stats {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    gap: 20%;
+    margin-top: 10%;
+}
+
+.first-section .stats p {
     color: #828282;
     font-size: 1em;
 }
 
-.info-section H3 {
+.first-section .stats H3 {
     color: #333333;
     font-size: 1.5em;
-
+    margin: 0;
 }
 
 .smiley_customer {
     background-color: white;
     border-radius: 100px;
     padding: 1em;
-
 }
 
 .smiley_customer img {
