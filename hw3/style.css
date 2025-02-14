@@ -1,6 +1,10 @@
 * {
     font-family: "Poppins", sans-serif;
     background-color: transparent;
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -70,6 +74,16 @@ html {
     align-self: center;
 }
 
+.beautiful-lines {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+}
+
+.main-page {
+    background: linear-gradient(to top right, #FFFFFF 0%, #F7F9FD 50%, #FFF1DD 100%);
+}
+
 .main-page-content {
     display: flex;
     padding: 1vh 5vw 1vh 5vw;
@@ -78,6 +92,7 @@ html {
 .first-section {
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .first-section article {
@@ -118,6 +133,65 @@ html {
     margin: 0;
 }
 
+.second-section {
+    width: 50%;
+    padding: 0;
+}
+
+.women-holder {
+    position: relative;
+    height: 100%;
+}
+
+.women-holder img {
+    position: absolute;
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.women-holder .woman {
+    height: 100%;
+    width: auto;
+    margin-top: -3%;
+    z-index: 5;
+}
+
+.solid-rect {
+    width: 100%;
+    height: auto;
+    z-index: 4;
+}
+
+.opaque-rect {
+    width: 94%;
+    height: auto;
+    z-index: 3;
+}
+
+.second-section .women-holder .dots-one {
+    z-index: 2;
+    top: 10%;
+    left: 10%;
+    transform: none;
+}
+
+.second-section .women-holder .dots-two {
+    z-index: 2;
+    top: 21%;
+    left: 77%;
+    transform: none;
+}
+
+.second-section .women-holder .heart {
+    z-index: 2;
+    top: 0;
+    left: 90%;
+    transform: none;
+    filter: blur(2px);
+}
+
 .smiley_customer {
     background-color: white;
     border-radius: 100px;
@@ -135,6 +209,7 @@ html {
 }
 
 .calorie-card {
+    position: static;
     width: 220px;
     background: #fff;
     border-radius: 16px;
@@ -142,6 +217,7 @@ html {
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 .header p {
     font-size: 14px;
