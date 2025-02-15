@@ -9,6 +9,7 @@
 
 html {
     font-size: 1vmax;
+    overflow-x: hidden;
 }
 
 .header {
@@ -59,6 +60,7 @@ html {
 
 .best-medal .orange-text {
     opacity: 1;
+    overflow-x: hidden;
 }
 
 
@@ -72,6 +74,7 @@ html {
     font-weight: bold;
     height: fit-content;
     align-self: center;
+    z-index: 7;
 }
 
 .beautiful-lines {
@@ -81,12 +84,22 @@ html {
 }
 
 .main-page {
-    background: linear-gradient(to top right, #FFFFFF 0%, #F7F9FD 50%, #FFF1DD 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 8%;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(17deg, rgba(255, 255, 255, 1) 51%, rgba(254, 211, 150, 1) 100%);
 }
 
 .main-page-content {
     display: flex;
     padding: 1vh 5vw 1vh 5vw;
+    gap: 25%;
+}
+
+.first-section .ordinary-button {
+    margin-top: 7%;
 }
 
 .first-section {
@@ -133,9 +146,11 @@ html {
     margin: 0;
 }
 
+
 .second-section {
     width: 50%;
     padding: 0;
+    position: relative;
 }
 
 .women-holder {
@@ -145,10 +160,7 @@ html {
 
 .women-holder img {
     position: absolute;
-    align-self: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
 }
 
 .women-holder .woman {
@@ -156,25 +168,35 @@ html {
     width: auto;
     margin-top: -3%;
     z-index: 5;
+
+    align-self: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .solid-rect {
+    position: absolute;
     width: 100%;
     height: auto;
     z-index: 4;
+    top: 23%;
+    transform: none;
+
 }
 
 .opaque-rect {
-    width: 94%;
+    position: absolute;
+    width: 100%;
+    top: 22%;
     height: auto;
     z-index: 3;
 }
 
 .second-section .women-holder .dots-one {
+    position: absolute;
     z-index: 2;
-    top: 10%;
-    left: 10%;
-    transform: none;
+    top: 22%;
 }
 
 .second-section .women-holder .dots-two {
@@ -192,32 +214,60 @@ html {
     filter: blur(2px);
 }
 
-.smiley_customer {
+
+.smiley-customer {
     background-color: white;
     border-radius: 100px;
-    padding: 1em;
+    padding: 2vh 3vw;
+    display: flex;
+    position: absolute;
+    z-index: 6;
+    top: 73%;
+    left: -5%;
+    gap: 4%;
 }
 
-.smiley_customer img {
+.smiley-customer .customer {
+    font-weight: bold;
+}
+
+.smiley-customer img {
     background-color: transparent;
     height: fit-content;
-
 }
 
-.smiley_customer .customer {
-    font-size: 1em;
+.smiley-customer .feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: auto;
+    white-space: nowrap;
 }
+
+.customer-grade {
+    display: flex;
+    align-items: center;
+}
+
 
 .calorie-card {
-    position: static;
-    width: 220px;
+    position: absolute;
+    width: 37%;
     background: #fff;
-    border-radius: 16px;
-    padding: 16px;
-    text-align: center;
+    opacity: 0.9;
+    border-radius: 35px;
+    padding: 3%;
+    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
+    top: 73%;
+    left: 60%;
+    z-index: 7;
 
+    display: flex;
+    flex-direction: column;
+
+    backdrop-filter: blur(20px);
+}
 
 .header p {
     font-size: 14px;
@@ -227,47 +277,34 @@ html {
 
 .header h2 {
     font-size: 24px;
-    margin: 8px 0 16px;
 }
 
-.calorie-card {
-    width: 15em;
-    background: #fff;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .calorie-card p {
-    font-size: 14px;
+    font-size: 0.8em;
     color: #666;
-    margin: 0;
+    margin-bottom: 7%;
 }
 
-.calorie-card h2 {
-    font-size: 24px;
-    margin: 8px 0 16px;
+.calorie-card h3 {
+    font-size: 2em;
+    margin-bottom: 9%;
 }
 
-/* Flex container for progress bars */
 .bar-plot {
+    flex-shrink: 3;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5%; /* This controls the spacing between progress bars */
-    height: 10% /* This sets the maximum fill length for each bar */
+    gap: 5%;
 }
 
-/* Vertical progress bar without wrappers */
 .bar {
     -webkit-appearance: none;
     appearance: none;
 
-    /* Fixed dimensions:
-       - width becomes the fixed thickness of the bar
-       - height is the full fill length */
     width: 7%;
-    height: 13%;
+    height: 10%;
 
     /* Use writing-mode and text direction so that the fill starts at the bottom */
     writing-mode: vertical-rl;
@@ -370,3 +407,33 @@ html {
 .card-button svg path {
     stroke: #FFFFFF; /* Change arrow color inside button */
 }
+
+.second-page {
+    display: flex;
+    padding: 7vh 5vw 7vh 5vw;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    height: 100vh;
+}
+
+.second-page header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.second-page p {
+    line-height: 2em;
+}
+
+.second-page .second-heading {
+    line-height: 1.8em;
+}
+
+.second-page main {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
