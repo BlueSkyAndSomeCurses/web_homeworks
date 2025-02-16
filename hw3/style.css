@@ -16,8 +16,7 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
-    padding: 2vh 7vw 2vh 7vw;
+    align-items: center;
 }
 
 .header-menu {
@@ -90,16 +89,17 @@ html {
     height: 100vh;
     width: 100%;
     background: linear-gradient(17deg, rgba(255, 255, 255, 1) 51%, rgba(254, 211, 150, 1) 100%);
+
+    padding: 5vh 7vw 0;
 }
 
 .main-page-content {
     display: flex;
-    padding: 1vh 5vw 1vh 5vw;
     gap: 25%;
 }
 
 .first-section .ordinary-button {
-    margin-top: 7%;
+    margin-top: 6%;
 }
 
 .first-section {
@@ -306,7 +306,6 @@ html {
     width: 7%;
     height: 10%;
 
-    /* Use writing-mode and text direction so that the fill starts at the bottom */
     writing-mode: vertical-rl;
     direction: rtl;
 
@@ -314,7 +313,6 @@ html {
     flex: 0 0 auto;
 }
 
-/* Styling for WebKit browsers (Chrome, Safari) */
 .bar::-webkit-progress-bar {
     background: #f0f0f0;
     border-radius: 6px;
@@ -325,7 +323,6 @@ html {
     border-radius: 6px;
 }
 
-/* Styling for Firefox */
 .bar::-moz-progress-bar {
     background: linear-gradient(to top, #ffa726, #ffcc80);
     border-radius: 6px;
@@ -335,85 +332,12 @@ html {
     font-size: 1.7em;
 }
 
-.card {
-    background: #FFFFFF; /* White card background */
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
-    width: 300px; /* Adjust width as needed */
-    text-align: center;
-    position: relative;
-}
-
-.card-badge {
-    position: absolute;
-    top: -40px; /* Position the badge above the card */
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    width: 60px;
-    height: 60px;
-    background: #FFE8C8;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.card-badge img {
-    width: 40px; /* Adjust icon size */
-    height: auto;
-}
-
-.card-content {
-    margin-top: 50px; /* Offset for badge */
-}
-
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #222222;
-}
-
-.card-description {
-    font-size: 14px;
-    color: #575757;
-    margin: 15px 0 20px;
-    line-height: 1.5;
-}
-
-.card-button {
-    background-color: #FFA550;
-    color: #FFFFFF;
-    border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px; /* Spacing between text and icon */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.card-button:hover {
-    background-color: #FF8A00;
-}
-
-.card-button svg path {
-    stroke: #FFFFFF; /* Change arrow color inside button */
-}
-
 .second-page {
     display: flex;
-    padding: 7vh 5vw 7vh 5vw;
+    padding: 7vh 7vw;
     flex-direction: column;
-    /*justify-content: space-between;*/
     height: 100vh;
+    width: 100vw;
 }
 
 .second-page header {
@@ -433,7 +357,193 @@ html {
 .second-page main {
     display: flex;
     flex-direction: row;
+    height: 100%;
+    padding: 10% 0 10% 0;
+    gap: 10%;
+    justify-content: space-between;
+}
+
+.card {
+    background: #FFFFFF;
+    border-radius: 30px;
+    border: #FFF0DA 1px solid;
+    padding: 3%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 0.5;
+}
+
+.card-content p {
+    padding-right: 15%;
+    line-height: 1em;
+}
+
+.card-button {
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 3%;
+    width: fit-content;
+    border-radius: 50px;
+    text-wrap: nowrap;
+    padding: 1vh 2vw;
 }
 
 
+.card:hover {
+    border: none;
+    box-shadow: 0 22px 64px #FFF0DA;
+}
 
+.card:hover .card-button {
+    background-color: orange;
+    color: white;
+}
+
+.card:hover .default-icon {
+    display: none;
+}
+
+.third-page {
+    display: flex;
+    padding: 30vh 7vw;
+    height: 100vh;
+    width: 100vw;
+    background-color: #FFF6EA;
+    gap: 7%;
+}
+
+.left-half {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    gap: 10%;
+
+    width: 70%;
+}
+
+.left-half article {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-half h1 {
+    font-size: 3em;
+}
+
+.left-half p {
+    font-size: 1em;
+    /*margin-top: 10%;*/
+}
+
+
+.posters-scroller {
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+
+}
+
+.left-half .make-it-interactive .out {
+    font-weight: bold;
+    font-size: 3em;
+}
+
+
+.left-half .posters-scroller .buttons {
+    height: 10%;
+    aspect-ratio: 1/1;
+}
+
+.left-half .posters-scroller .buttons button {
+    border-radius: 15px;
+    border: none;
+    height: 100%;
+    aspect-ratio: 1/1;
+}
+
+
+.left-half .buttons .left-button {
+    background-color: #FFC87A;
+}
+
+.left-half .buttons .right-button {
+    background-color: #FB9333;
+}
+
+/*.cards-section {*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.cards-section div {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: white;*/
+/*    border-radius: 20px;*/
+/*}*/
+
+.cards-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.cards-section > div {
+    background: white;
+    border-radius: 16px;
+    padding: 5%;
+    text-align: left;
+    height: fit-content;
+}
+
+
+.cards-section img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.cards-section h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.cards-section p {
+    color: #666;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+    .cards-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-section > div {
+        width: 90%;
+    }
+}
