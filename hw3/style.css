@@ -1,3 +1,4 @@
+
 * {
     font-family: "Poppins", sans-serif;
     background-color: transparent;
@@ -6,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 
 html {
     font-size: 1vmax;
@@ -26,6 +28,15 @@ html {
     justify-content: space-evenly;
     width: 30%;
     gap: 10%;
+
+    a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: orange;
+    }
 }
 
 .logo {
@@ -386,7 +397,7 @@ html {
 
 .card-content p {
     padding-right: 15%;
-    line-height: 1em;
+    line-height: 1.4em;
 }
 
 .card-button {
