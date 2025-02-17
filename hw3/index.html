@@ -62,32 +62,34 @@
                 <img alt="dots" class="dots-two" src="images/dots1.svg"/>
                 <img alt="woman-eating-salad" class="woman" src="images/woman.png">
             </figure>
-            <div class="smiley-customer">
-                <img alt="smiley-customer" src="images/smiley_customer.svg"/>
+            <div class="smiley-customer-hist">
+                <div class="smiley-customer">
+                    <img alt="smiley-customer" src="images/smiley_customer.svg"/>
 
-                <div class="feedback">
-                    <p class="customer dark-grey-text">Our Happy Customer</p>
-                    <div class="customer-grade">
-                        <img alt="star" src="./images/Star.svg">
-                        <p class="dark-grey-text">4.9</p>
-                        <p class="grey-text">(1.968 Reviews)</p>
+                    <div class="feedback">
+                        <p class="customer dark-grey-text">Our Happy Customer</p>
+                        <div class="customer-grade">
+                            <img alt="star" src="./images/Star.svg">
+                            <p class="dark-grey-text">4.9</p>
+                            <p class="grey-text">(1.968 Reviews)</p>
+                        </div>
                     </div>
                 </div>
+                <section class="calorie-card">
+                    <p>Daily Calories</p>
+                    <H3>123 Cal</H3>
+                    <figure class="bar-plot">
+                        <progress class="bar" max="100" value="30"></progress>
+                        <progress class="bar" max="100" value="40"></progress>
+                        <progress class="bar" max="100" value="80"></progress>
+                        <progress class="bar" max="100" value="60"></progress>
+                        <progress class="bar" max="100" value="50"></progress>
+                        <progress class="bar" max="100" value="70"></progress>
+                        <progress class="bar" max="100" value="70"></progress>
+                        <progress class="bar" max="100" value="30"></progress>
+                    </figure>
+                </section>
             </div>
-            <section class="calorie-card">
-                <p>Daily Calories</p>
-                <H3>123 Cal</H3>
-                <figure class="bar-plot">
-                    <progress class="bar" max="100" value="30"></progress>
-                    <progress class="bar" max="100" value="40"></progress>
-                    <progress class="bar" max="100" value="80"></progress>
-                    <progress class="bar" max="100" value="60"></progress>
-                    <progress class="bar" max="100" value="50"></progress>
-                    <progress class="bar" max="100" value="70"></progress>
-                    <progress class="bar" max="100" value="70"></progress>
-                    <progress class="bar" max="100" value="30"></progress>
-                </figure>
-            </section>
         </section>
     </main>
 </section>
@@ -154,29 +156,25 @@
 </section>
 <section class="third-page">
     <section class="left-half">
-        <article>
-            <h1>
-                What Are People Saying
-                <mark class="orange-text">About Us</mark>
-            </h1>
-            <p class="grey-text">We are very happy if you are satisfied with our service and products, let's read pure
-                reviews from
-                customers
-                who bought our products.</p>
-        </article>
-        <div class="posters-scroller">
-            <p class="make-it-interactive">
-                <span class="out">02</span>
-                <span class="of grey-text">/05</span>
-            </p>
-            <div class="buttons">
-                <button class="left-button">
-                    <img alt="left-arrow" src="images/arrow_back.svg"/>
-                </button>
-                <button class="right-button">
-                    <img alt="right-arrow" src="images/Arrow - Right-white.svg"/>
-                </button>
-            </div>
+        <h1>
+            What Are People Saying
+            <mark class="orange-text">About Us</mark>
+        </h1>
+        <p class="grey-text">We are very happy if you are satisfied with our service and products, let's read pure
+            reviews from
+            customers
+            who bought our products.</p>
+        <p class="make-it-interactive">
+            <span class="out">02</span>
+            <span class="of grey-text">/05</span>
+        </p>
+        <div class="buttons">
+            <button class="left-button">
+                <img alt="left-arrow" src="images/arrow_back.svg"/>
+            </button>
+            <button class="right-button">
+                <img alt="right-arrow" src="images/Arrow - Right-white.svg"/>
+            </button>
         </div>
     </section>
     <section class="cards-section">
@@ -184,8 +182,10 @@
             <img alt="woman-sun" src="images/woman_sun.png">
             <article>
                 <h2>Selena Gomz</h2>
-                <p>22 Year</p>
-                <p>The salad is fresh!!! Don't ask about the sauce again, it's really delicious, it's going to be
+                <p class="grey-text">22 Year</p>
+                <p class="dark-grey-text">The salad is fresh!!! Don't ask about the sauce again, it's really
+                    delicious,
+                    it's going to be
                     routine. I recommend this salad to all of you guys! because they really take care of the
                     quality.</p>
             </article>
@@ -194,8 +194,11 @@
             <img alt="frontend-late-enjoyer" src="images/frontend_late_enjoyer.png">
             <article>
                 <h2>David Ken</h2>
-                <p>24 Year</p>
-                <p>The salad is fresh!!! Don't ask about the sauce again, it's really delicious, it's going to be
+                <p class="grey-text">24 Year</p>
+                <p class="dark-grey-text">The salad is fresh!!! Don't ask about the sauce again, it's really
+                    delicious,
+                    it's
+                    going to be
                     routine. I recommend this salad to all of you guys! because they really take care of the
                     quality.</p>
             </article>
@@ -204,119 +207,135 @@
             <img alt="vbz" src="images/vbz.png">
             <article>
                 <h2>Jennifer Sina</h2>
-                <p>21 Year</p>
-                <p>The salad is fresh!!! Don't ask about the sauce again, it's really delicious, it's going to be
+                <p class="grey-text">21 Year</p>
+                <p class="dark-grey-text">The salad is fresh!!! Don't ask about the sauce again, it's really
+                    delicious,
+                    it's
+                    going to be
                     routine. I recommend this salad to all of you guys! because they really take care of the
                     quality.</p>
             </article>
         </div>
     </section>
 </section>
-<section>
+<section class="fourth-page">
     <header>
         <p>
-            <mark>
+            <mark class="orange-text">
                 MENU YANG MEMBUATMU JATUH CINTA
             </mark>
         </p>
         <h1>ENJOY THE BEST MENU AND GET
-            <mark>DISCOUNTS</mark>
+            <mark class="orange-text">DISCOUNTS</mark>
             AVAILABLE
         </h1>
     </header>
     <main>
-        <div>
-            <figure>
-                <img alt="vegetable-salad"
-                     src="images/front-view-vegetable-salad-from-boiled-vegetables-mixed-inside-round-plate-dark-background 1.png">
-            </figure>
-            <p>Mini Salad Yummy</p>
-            <p>$2.99</p>
-        </div>
-        <div>
-            <figure>
-                <img alt="fruit-salad" src="images/top-view-fruity-salad-with-fresh-sliced-fruits 1.png">
-            </figure>
-            <p>Completed Salad</p>
-            <p>$3.99</p>
-        </div>
-        <div>
-            <figure>
-                <img alt="fruktoviy-salad" src="images/fruktoviy-salat.png">
-            </figure>
-            <p>Salad Yummy Red</p>
-            <p>$3.99</p>
-        </div>
+        <figure>
+            <img alt="vegetable-salad"
+                 src="images/front-view-vegetable-salad-from-boiled-vegetables-mixed-inside-round-plate-dark-background 1.png">
+            <div class="price-text">
+                <p>Mini Salad Yummy</p>
+                <span>$ 2.99</span>
+            </div>
+        </figure>
+        <figure>
+            <img alt="fruit-salad" src="images/top-view-fruity-salad-with-fresh-sliced-fruits 1.png">
+
+            <div class="price-text">
+                <p>Completed Salad</p>
+                <span>$ 3.99</span>
+            </div>
+
+        </figure>
+        <figure>
+            <img alt="fruktoviy-salad" src="images/fruktoviy-salat.png">
+
+            <div class="price-text">
+                <p>Salad Yummy Red</p>
+                <span>$ 3.99</span>
+            </div>
+
+        </figure>
     </main>
 </section>
-<section>
-    <div>
-        <figure>
-            <img alt="curves" src="images/curves.svg">
-        </figure>
-        <article>
-            <p>
-                <mark>Our Subscribe</mark>
-            </p>
-            <H1>Subscribe To Get The Latest Promo from Jez Salad</H1>
-            <p>We recommended you to subscribe to our promo program, drop your email below to get daily update about
-                us</p>
-        </article>
-        <section>
-            <form action="/subscribe" method="post">
-                <fieldset>
-                    <label for="email">Email Address:</label>
-                    <input id="email" name="email" placeholder="Enter your email address" required type="email">
-                    <button type="submit">Subscribe</button>
-                </fieldset>
-            </form>
-        </section>
+<section class="fifth-page">
+    <div class="main-part">
+        <img alt="curves" src="images/curves.svg">
+        <div class="text-part">
+            <article>
+                <mark class="orange-text">Our Subscribe</mark>
+                <H1 class="dark-grey-text">Subscribe To Get The Latest Promo from Jez Salad</H1>
+                <p class="grey-text">We recommended you to subscribe to our promo program, drop your email below to get
+                    daily update about
+                    us</p>
+            </article>
+
+            <section>
+                <form action="/subscribe" method="post">
+                    <fieldset>
+                        <label class="sr-only" for="email">Email Address:</label>
+                        <input id="email" name="email" placeholder="Enter your email address" required type="email">
+                        <button type="submit">Subscribe</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
     </div>
 </section>
-<footer>
-    <section>
-        <summary>
-            <h2>
-                <mark>JEZ</mark>
-                SALAD
+<footer class="footer-container">
+    <section class="brand-section">
+        <div class="brand-info">
+            <h2 class="logo">
+                <span class="logo-highlight orange-text">JEZ</span> SALAD
             </h2>
-            <p>Jez Salad is the pioneer of healthy fruit salad with high nutrition.</p>
-        </summary>
-        <p>&copy; Jez Salad</p>
+            <p class="brand-tagline">Jez Salad is the pioneer of healthy fruit salad with high nutrition.</p>
+        </div>
+        <p class="copyright">&copy; Copyright Jez Salad</p>
     </section>
 
-    <nav>
-        <h2>
-            <mark>Feature</mark>
-        </h2>
-        <ul>
-            <li><a href="">Menu</a></li>
-            <li><a href="">Promo</a></li>
-            <li><a href="">Contact</a></li>
-            <li><a href="">About Us</a></li>
+    <nav class="footer-nav">
+        <h2 class="section-title orange-text">Feature</h2>
+        <ul class="nav-menu">
+            <li class="menu-item"><a href="">Menu</a></li>
+            <li class="menu-item"><a href="">Promo</a></li>
+            <li class="menu-item"><a href="">Contact</a></li>
+            <li class="menu-item"><a href="">About Us</a></li>
         </ul>
     </nav>
-    <section>
-        <h2>
-            <mark>Get in Touch</mark>
-        </h2>
-        <p><img alt="location-marker" src="images/location_on.svg"/>8819 Ohio St. South Gate, CA 90280</p>
-        <p><img alt="location-marker" src="images/email.svg"/>Ourstudio@hello.com</p>
-        <p><img alt="location-marker" src="images/call.svg"/>+380 386-688-3295</p>
+
+    <section class="contact-section">
+        <h2 class="section-title orange-text">Get in Touch</h2>
+        <div class="contact-info">
+            <p class="contact-item">
+                <img alt="location" class="contact-icon" src="images/location_on.svg"/>
+                <span class="contact-text">8819 Ohio St. South Gate, CA 90280</span>
+            </p>
+            <p class="contact-item">
+                <img alt="email" class="contact-icon" src="images/email.svg"/>
+                <span class="contact-text">Ourstudio@hello.com</span>
+            </p>
+            <p class="contact-item">
+                <img alt="phone" class="contact-icon" src="images/call.svg"/>
+                <span class="contact-text">+1 386-688-3295</span>
+            </p>
+        </div>
     </section>
 
-    <section>
-        <div>
-            <a href="https://facebook.com">
-                <img alt="facebook" src="images/facebook.svg"/>
-            </a>
-            <a href="https://instagram.com">
-                <img alt="instagram" src="images/instagram (2) 1.svg"/>
-            </a>
-            <a href="https://linkedin.com">
-                <img alt="linkedin" src="images/linkedin (2) 1.svg"/>
-            </a>
-            <p>Follow our social media.</p>
+    <section class="social-section">
+        <div class="social-links">
+            <div class="social-icons">
+                <a class="social-link" href="https://facebook.com">
+                    <img alt="facebook" class="social-icon" src="images/facebook.svg"/>
+                </a>
+                <a class="social-link" href="https://instagram.com">
+                    <img alt="instagram" class="social-icon" src="images/instagram (2) 1.svg"/>
+                </a>
+                <a class="social-link" href="https://linkedin.com">
+                    <img alt="linkedin" class="social-icon" src="images/linkedin (2) 1.svg"/>
+                </a>
+            </div>
+            <p class="social-text">Follow our social media.</p>
         </div>
     </section>
 </footer>
