@@ -13,6 +13,7 @@ html {
     overflow-x: hidden;
 }
 
+
 .header {
     display: flex;
     flex-direction: row;
@@ -97,7 +98,9 @@ html {
     flex-direction: column;
     gap: 8%;
     height: 100vh;
-    width: 100%;
+    min-height: 100vh;
+
+    width: 100vw;
     background: linear-gradient(17deg, rgba(255, 255, 255, 1) 31%, rgba(254, 211, 150, 1) 100%);
 
     padding: 5vh 7vw 0;
@@ -231,7 +234,7 @@ html {
     padding: 1vh 3vw 1vh 1vh;
     display: flex;
     z-index: 6;
-    gap: 4%;
+    gap: 1vh;
     height: fit-content;
 }
 
@@ -261,10 +264,12 @@ html {
 .calorie-card {
     width: 37%;
     height: 15%;
+    min-width: 180px;
+    max-height: 330px;
     background: #fff;
     opacity: 0.9;
     border-radius: 35px;
-    padding: 3vh 1vw;
+    padding: 2vh 1vw;
     text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 7;
@@ -295,7 +300,6 @@ html {
 
 .calorie-card h3 {
     font-size: 2em;
-    margin-bottom: 9%;
 }
 
 .bar-plot {
@@ -341,7 +345,7 @@ html {
 
 .second-page {
     display: flex;
-    padding: 7vh 7vw;
+    padding: 15vh 10vw;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
@@ -351,6 +355,14 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.second-page header .left-text {
+    width: 30%;
+}
+
+.second-page header .right-text {
+    width: 30%;
 }
 
 .second-page p {
@@ -392,6 +404,9 @@ html {
     text-align: left;
     width: 30%;
 
+    min-height: 390px;
+    height: fit-content;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -400,17 +415,23 @@ html {
 .card-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     flex-grow: 0.5;
-    gap: 5%;
+
+    h3 {
+        margin-top: 3vh;
+    }
+
+    p {
+        padding-right: 15%;
+        padding-top: 2vh;
+        line-height: 1.4em;
+        color: #828282;
+    }
 }
 
-.card-content p {
-    padding-right: 15%;
-    line-height: 1.4em;
-}
 
 .card-button {
+    margin-top: 2vh;
     border: 1px transparent solid;
     display: inline-flex;
     align-items: center;
@@ -438,11 +459,25 @@ html {
 
 .third-page {
     display: flex;
-    padding: 30vh 0 27vh 7vw;
+    align-items: center;
+    justify-content: flex-end;
     height: 100vh;
     width: 100vw;
+
     background-color: #FFF6EA;
-    gap: 7%;
+
+    main {
+        display: flex;
+        height: 40%;
+        width: 90%;
+        min-height: 490px;
+        max-height: 540px;
+
+        aspect-ratio: 3/1;
+
+        gap: 7%;
+    }
+
 }
 
 .left-half {
@@ -456,7 +491,6 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 3vh;
     margin-bottom: auto;
 
 }
@@ -521,7 +555,7 @@ html {
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-start;
 }
 
 
@@ -534,16 +568,17 @@ html {
 }
 
 .cards-section article {
+    padding-top: 3vh;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2vh;
 }
 
 .fourth-page {
     height: 100vh;
     width: 100vw;
-    gap: 5vh;
+    gap: 5vw;
     padding: 7vh;
 
     display: flex;
@@ -574,14 +609,17 @@ html {
         display: flex;
         justify-content: space-evenly;
 
+        gap: 2vw;
 
-        figure {
+
+        .figure {
             position: relative;
             width: fit-content;
 
 
             img {
                 height: 100%;
+                width: 100%;
             }
 
             .price-text {
